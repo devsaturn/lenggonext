@@ -1,53 +1,61 @@
 import Head from 'next/head'
+import Link from 'next/link'
+import Image from 'next/image'
 import styles from '../styles/Home.module.css'
+import TextDescription from '../components/TextDescription'
 
 export default function Home() {
   return (
     <div className={styles.container}>
       <Head>
-        <title>Create Next App</title>
-        <link rel="icon" href="/favicon.ico" />
+        <title>Lenggo</title>
+        <link rel="icon" href="/favicon.png" />
       </Head>
 
       <main className={styles.main}>
         <h1 className={styles.title}>
-          Bienvenu à <a href="https://nextjs.org">Lenggo!</a>
+          Bienvenu à {'    '}
+          <span><Image src="/logo.png" width={80} height={80}/>enggo</span>
         </h1>
 
         <p className={styles.description}>
           Facilitateur numérique
         </p>
 
+        <p className={styles.description}>
+        <TextDescription/>
+        </p>
+
 
         <div className={styles.grid}>
-          <a href="https://nextjs.org/docs" className={styles.card}>
-            <h3>Lenggo Produits &rarr;</h3>
-            <p>Lenggo RSE - Solution de gestion de projet et dispositif RSE</p>
-          </a>
+          <div className={styles.card}>
+              <Link href="/produits"><a>
+                <h3>
+                  <Image src="/logo_RSE.png" width={30} height={30}/>
+                  enggo RSE &rarr;
+                </h3>
+                <p>Solution de gestion de projets et dispositifs RSE</p>
+              </a>
+              </Link>
+          </div>
 
-          <a href="https://nextjs.org/learn" className={styles.card}>
-            <h3>Lenggo Services &rarr;</h3>
-            <p>AMO insertion emploi - Formation clauses sociales</p>
+<div className={styles.card}>
+          <Link href="/services" >
+            <a>
+            <h3>
+              <Image src="/logo_SERVICES.png" width={30} height={30}/>
+              enggo Services &rarr;
+            </h3>
+            <p>Conseil, accompagnement et formation RSE Emploi</p>
           </a>
+          </Link>
+</div>
 
-        <p className={styles.description}>
-          pour les entreprises, établissement public, promoteurs privés, structures d'insertion
-        </p>
 
 
         </div>
       </main>
 
-      <footer className={styles.footer}>
-        <a
-          href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Powered by{' '}
-          <img src="/vercel.svg" alt="Vercel Logo" className={styles.logo} />
-        </a>
-      </footer>
     </div>
   )
 }

@@ -53,6 +53,16 @@
 }
 
 .title,
+/* 
+.path{
+  clip-path: polygon(50% 0%, 100% 0, 100% 29%, 20% 100%, 0 100%, 0 68%, 0 39%);
+background: rgb(0,38,129);
+background: linear-gradient(191deg, rgba(0,38,129,1) 55%, rgba(255,255,255,1) 82%, rgba(246,246,246,1) 100%);
+z-index: 1;
+width: 100vw;
+height: 100vh
+} */
+
 .description {
   text-align: center;
 }
