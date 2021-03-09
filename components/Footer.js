@@ -1,11 +1,10 @@
 import React from 'react'
-import styles from '../styles/Home.module.css'
+import style from '../styles/Footer.module.css'
 function Footer() {
     return (
-        <div>
-          <p
-        >
-          Powered by Lenggo
+        <div className={style.footer_container}>
+          <p>
+          Powered by <span className={style.footer_powerBy}>Lenggo</span>
         </p>
 
         </div>

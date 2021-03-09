@@ -1,13 +1,20 @@
 import React from 'react'
+import Typewriter from 'typewriter-effect';
+import style from '../styles/Typeeffect.module.css'
 
 function TextDescription() {
     return (
-        <div>
-            <p>
-              pour les entreprises, établissement public, promoteurs privés, structures d'insertion
+            <div className="typewriter">
+                <h3>Vous êtes{'  '}<Typewriter
+                    options={{
+                        strings: ['une entreprise ?', 'un établissement public ?', 'une structure d\'insertion ?', 'un club d\'entreptise ?'],
+                        autoStart: true,
+                        loop: true,
+                    }}
+                    /> 
+                </h3>
+            </div>
 
-            </p>
-        </div>
     )
 }
 
